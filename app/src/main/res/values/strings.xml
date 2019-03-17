@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">IHTodos</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="divider_bullet">•</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="message_no_results">Oops, couldn\'t find any results</string>
+    <string name="message_no_reviews">No comments posted yet</string>
+    <string name="submit">Submit</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_update">Update</string>
+    <string name="add_comment">Post Comment</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="comments">Comment(s)</string>
+
+    <string name="title_sign_in_error">Sign In Error</string>
+    <string name="message_no_network">No network connection.</string>
+    <string name="message_unknown">Unknown error.</string>
+    <string name="option_retry">Retry</string>
+    <string name="option_exit">Exit</string>
+    <string name="select_time">Select time</string>
+    <string name="action_settings">Settings</string>
+    <string name="daily_alarm">Daily alarm</string>
+    <string name="todo_progress_label">Progress</string>
+    <string name="enter_title">Enter title</string>
+
+    <string name="todo_todo">todo</string>
+    <string name="todo_done">done</string>
+    <string name="todo_inprogress">in progress</string>
+
+    <!-- progress -->
+    <string-array name="progress">
+
+        <item>Todo</item>
+        <item>In Progress</item>
+        <item>Done</item>
+
+    </string-array>
+
+</resources>

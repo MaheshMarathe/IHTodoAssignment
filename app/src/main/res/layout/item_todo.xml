@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10dp"
+    app:cardCornerRadius="@dimen/margin_5dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_10dp"
+    >
+
+    <TextView
+        android:id="@+id/todoTitle"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/greyPrimary"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Foo's Bar" />
+
+    <TextView
+        android:id="@+id/todo_progress"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_todo"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        tools:text="San Francisco" />
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/todo_top_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_10dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="@dimen/margin_5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10dp">
+
+            <ImageView
+                android:id="@+id/todo_details_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/close_button" />
+
+            <TextView
+                android:id="@+id/todo_title"
+                style="@style/AppTheme.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/todo_details_back"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                tools:text="Some todo" />
+
+            <TextView
+                android:id="@+id/todo_progress"
+                style="@style/AppTheme.Subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/todo_title"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_todo"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                tools:text="San Francisco" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/todo_comment_label"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/todo_top_card"
+        android:layout_margin="@dimen/margin_10dp"
+        android:text="@string/comments"
+        android:textColor="@color/greyPrimary"
+        android:textStyle="bold"
+        tools:text="Some todo" />
+
+    <!-- Ratings -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_comment"
+        android:layout_below="@+id/todo_comment_label"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        tools:listitem="@layout/item_todo_comment" />
+
+    <Button
+        android:id="@+id/add_comment"
+        style="@style/AppTheme.ButtonPrimary"
+        android:text="@string/add_comment" />
+
+    <!-- View for empty ratings -->
+    <LinearLayout
+        android:id="@+id/empty_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_no_reviews"
+            android:textColor="@color/greyDisabled" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
